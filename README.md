@@ -64,6 +64,7 @@ This Python script allows you to control your Roku device remotely using its ext
 - If an app launch fails, check that the app name matches exactly (case-insensitive).
 - Play/Pause, Rewind, and Fast Forward work during media playback.
 - Power Off is supported only on some Roku models.
+- It is recommended that you reserve the IP for your Roku in your router settings and make sure AP Isolation is turned off.
 
 ## License
 This project is open-source and available under the MIT License.
