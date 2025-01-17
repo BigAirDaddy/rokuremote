@@ -27,7 +27,13 @@ if response.status_code == 200:
         print('9. Volume Down')
         print('10. List Apps')
         print('11. Launch App')
-        print('12. Exit')
+        print('12. Play/Pause')
+        print('13. Rewind')
+        print('14. Fast Forward')
+        print('15. Info')
+        print('16. Mute')
+        print('17. Power Off')
+        print('18. Exit')
 
         select = input('Enter your selection: ')
 
@@ -41,6 +47,13 @@ if response.status_code == 200:
             '7': 'Back',
             '8': 'VolumeUp',
             '9': 'VolumeDown',
+            '12': 'Play',
+            '13': 'Rewind',
+            '14': 'Fwd',
+            '15': 'Info',
+            '16': 'VolumeMute',
+            '17': 'PowerOff',
+            '18': 'Exit',
             '0': 'PowerOn'
         }
 
@@ -51,7 +64,7 @@ if response.status_code == 200:
             else:
                 print(f'Error: {req_response.status_code}')
 
-        elif select == '10':  # List installed apps
+        elif select == '10':  
             apps_response = requests.get(URL + '/query/apps')
             if apps_response.status_code == 200:
                 root = ET.fromstring(apps_response.content)
@@ -63,7 +76,7 @@ if response.status_code == 200:
             else:
                 print('Failed to retrieve apps.')
 
-        elif select == '11':  # Launch an app
+        elif select == '11':  
             app_name = input("Enter the app name (case-insensitive): ").strip().lower()
             apps_response = requests.get(URL + '/query/apps')
             if apps_response.status_code == 200:
@@ -82,7 +95,7 @@ if response.status_code == 200:
             else:
                 print('Failed to retrieve apps.')
 
-        elif select == '12':  # Exit
+        elif select == '18':  
             print("Exiting remote control. Goodbye!")
             break
 
