@@ -2,13 +2,15 @@
 # Roku Remote Control Script
 
 ## Overview
-This Python script allows you to control your Roku device remotely using its external control API. You can navigate the Roku interface, control volume, list installed apps, and launch apps directly from the terminal.
+This Python script allows you to control your Roku device remotely using its external control API. You can navigate the Roku interface, control volume, list installed apps, launch apps, and manage playback directly from the terminal.
 
 ## Features
-- Power on the Roku device
+- Power on/off the Roku device
 - Navigate using arrow keys
 - Go home, select, and go back
-- Adjust volume
+- Adjust volume and mute
+- Control media playback (play/pause, rewind, fast forward)
+- Display media information
 - List installed apps
 - Launch an app by name
 
@@ -49,13 +51,23 @@ This Python script allows you to control your Roku device remotely using its ext
 | 9 | Volume Down |
 | 10 | List Apps |
 | 11 | Launch App |
-| 12 | Exit |
+| 12 | Play/Pause |
+| 13 | Rewind |
+| 14 | Fast Forward |
+| 15 | Info |
+| 16 | Mute |
+| 17 | Power Off |
+| 18 | Exit |
 
 ## Notes
 - Ensure your Roku device allows external control under **Settings > System > Advanced System Settings > External Control > Enable Control via Network**.
 - If an app launch fails, check that the app name matches exactly (case-insensitive).
+- Play/Pause, Rewind, and Fast Forward work during media playback.
+- Power Off is supported only on some Roku models.
 
 ## License
 This project is open-source and available under the MIT License.
+
+
 
 
